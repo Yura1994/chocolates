@@ -1,0 +1,26 @@
+<!-- Пользователь вводит сумму денег в кошельке и цену одной
+шоколадки. Программа выводит сколько шоколадок может
+купить пользователь и сколько сдачи у него останется.  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let ko = prompt("Укажите сколько денег в кошельке");
+        let sh = prompt("Укажите цену одной шоколадки");
+        if(Number(ko) > Number(sh)){
+            let kol_sh = Math.trunc(ko/sh);
+            let sd = ko - kol_sh*sh;
+
+            alert("Вы можете купить шоколадок: " + kol_sh + "у вас останеться сдача: " + sd);            
+        }else{
+
+            alert("У вас не хватает денег на шоколадку")
+        }  
+    </script>
+</body>
+</html>
